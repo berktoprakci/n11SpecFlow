@@ -35,6 +35,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BrowserStack, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BrowserStack.2.0.1\lib\net35\BrowserStack.dll</HintPath>
+    </Reference>
+    <Reference Include="BrowserStackLocal, Version=1.4.0.0, Culture=neutral, PublicKeyToken=0941226e876e334f, processorArchitecture=MSIL">
+      <HintPath>..\packages\BrowserStackLocal.1.4.0\lib\net20\BrowserStackLocal.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -42,6 +48,7 @@
       <HintPath>..\packages\NUnit.3.11.0\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.ValueTuple, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -64,6 +71,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BrowserStack.cs" />
     <Compile Include="Features\N11CartWishlistFunctions.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

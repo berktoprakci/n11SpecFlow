@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TechTalk.SpecFlow;
 
 namespace SpecFlowDemo.PageObjects
 {
@@ -13,9 +14,11 @@ namespace SpecFlowDemo.PageObjects
     {
 
         private static IWebDriver _driver;
+        readonly BrowserStackDriver _bsDriver;
 
         public LoginPageObjects(IWebDriver driver)
         {
+            _bsDriver = (BrowserStackDriver)ScenarioContext.Current["bsDriver"];
             _driver = driver;
             PageFactory.InitElements(_driver, this);
         }

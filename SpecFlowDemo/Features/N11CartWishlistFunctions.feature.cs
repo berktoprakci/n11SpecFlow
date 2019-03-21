@@ -74,8 +74,8 @@ namespace SpecFlowDemo.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("1Navigate to site\'s HomePage")]
         [NUnit.Framework.CategoryAttribute("mytag")]
-        [NUnit.Framework.TestCaseAttribute("\'http://www.n11.com/\'", "\'n11.com - Alışverişin Uğurlu Adresi\'", "\'https://www.n11.com/\'", null)]
-        public virtual void _1NavigateToSitesHomePage(string siteaddress, string pagetitle, string siteurl, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("\'http://www.n11.com/\'", "\'n11.com - Alışverişin Uğurlu Adresi\'", "\'https://www.n11.com/\'", "\'single\'", "\'chrome\'", null)]
+        public virtual void _1NavigateToSitesHomePage(string siteaddress, string pagetitle, string siteurl, string profile, string environment, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "mytag"};
@@ -88,7 +88,7 @@ namespace SpecFlowDemo.Features
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
- testRunner.Given("User at browser\'s home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given(string.Format("User {0} at {1} browser home page", profile, environment), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 7
  testRunner.When(string.Format("User navigate to {0}", siteaddress), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 8

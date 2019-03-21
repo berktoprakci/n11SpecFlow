@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TechTalk.SpecFlow;
 
 namespace SpecFlowDemo.PageObjects
 {
@@ -13,9 +14,11 @@ namespace SpecFlowDemo.PageObjects
     {
 
         private static IWebDriver  _driver;
+        readonly BrowserStackDriver _bsDriver;
 
         public SearchPageObjects(IWebDriver driver)
         {
+            _bsDriver = (BrowserStackDriver)ScenarioContext.Current["bsDriver"];
             _driver = driver;
             PageFactory.InitElements(_driver, this);
         }
@@ -26,7 +29,7 @@ namespace SpecFlowDemo.PageObjects
         [FindsBy(How = How.CssSelector, Using = ".pagination a")]
         public IList<IWebElement> pagination { get; set; }
 
-        [FindsBy(How = How.CssSelector, Using = ".currentPage")]
+        [FindsBy(How = How.CssSelector, Using = "#currentPage")]
         public IWebElement pageNumber { get; set; }
 
         [FindsBy(How = How.CssSelector, Using = "section.resultListGroup div ul li div.columnContent")]

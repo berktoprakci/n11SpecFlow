@@ -13,27 +13,41 @@ namespace SpecFlowDemo.Steps
     public class N11CartWishlistFunctionsSteps
     {
 
-        private static IWebDriver _driver = new ChromeDriver();
-            
+        private static IWebDriver _driver;// = new ChromeDriver();
+        readonly BrowserStackDriver _bsDriver;
 
-        //public N11CartWishlistFunctionsSteps()
-        //{
-        //}
+        public N11CartWishlistFunctionsSteps()
+        {
+            _bsDriver = (BrowserStackDriver)ScenarioContext.Current["bsDriver"];
+        }
 
 
         //public static IWebDriver driver;
-        private string productSerialNumber;
+        private static string productSerialNumber;
 
-        [Given(@"User at browser's home page")]
-        public void GivenUserAtBrowserSHomePage()
+        [Given(@"User '(.*)' at '(.*)' browser home page")]
+        public void GivenUserAtBrowserHomePage(string profile, string environment)
         {
+            _driver = _bsDriver.Init(profile, environment);
             BasePage page = new BasePage(_driver);
-            page.InitTest();
+            page.InitTest(profile, environment);
             //driver = new ChromeDriver();
             //driver.Manage().Window.Maximize();
             //driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
         }
-        
+
+
+        //[Given(@"User at browser's home page")]
+        //public void GivenUserAtBrowserSHomePage()
+        //{
+        //    _driver = _bsDriver.Init(profile, environment);
+        //    BasePage page = new BasePage(_driver);
+        //    page.InitTest();
+        //    //driver = new ChromeDriver();
+        //    //driver.Manage().Window.Maximize();
+        //    //driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+        //}
+
         [Given(@"User at  Homepage")]
         public void GivenUserAtHomepage()
         {
@@ -104,7 +118,7 @@ namespace SpecFlowDemo.Steps
         [When(@"User navigate to '(.*)'")]
         public void WhenUserNavigateTo(string sitedaddress)
         {
-            BasePage page = new BasePage(_driver);
+            HeaderObjects page = new HeaderObjects(_driver);
             page.Navigate(sitedaddress);
             //driver.Url = sitedaddress;
         }
@@ -213,6 +227,7 @@ namespace SpecFlowDemo.Steps
         {
             FavoritesPageObjects page = new FavoritesPageObjects(_driver);
             page.confirmThatProductIsDeleted(productSerialNumber);
+            _driver.Quit();
             //bool we = false;
             //try
             //{

@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TechTalk.SpecFlow;
 
 namespace SpecFlowDemo.PageObjects
 {
@@ -13,9 +14,11 @@ namespace SpecFlowDemo.PageObjects
     {
 
         private static IWebDriver _driver;
+        readonly BrowserStackDriver _bsDriver;
 
         public FavoritesPageObjects(IWebDriver driver)
         {
+            _bsDriver = (BrowserStackDriver)ScenarioContext.Current["bsDriver"];
             _driver = driver;
             PageFactory.InitElements(_driver, this);
         }
@@ -40,14 +43,22 @@ namespace SpecFlowDemo.PageObjects
         public void confirmThatProductIsDeleted(string productserialnumber)
         {
             bool we = false;
-            try
-            {
-                _driver.FindElement(By.CssSelector("#" + productserialnumber));
-            }
-            catch (OpenQA.Selenium.NoSuchElementException e)
+            if (_driver.FindElements(By.Id(productserialnumber)).Count != 0)
             {
                 we = true;
             }
+            //try
+            //{
+            //    if (_driver.FindElements(By.CssSelector("#" + productserialnumber)).Count != 0)
+            //    {
+            //        we = true;
+            //    }
+                
+            //}
+            //catch (OpenQA.Selenium.NoSuchElementException e)
+            //{
+            //    we = true;
+            //}
 
             Assert.That(we, Is.True);
         }

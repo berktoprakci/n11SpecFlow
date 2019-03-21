@@ -3,12 +3,12 @@
 
 @mytag
 Scenario Outline: 1Navigate to site's HomePage
-	Given User at browser's home page
+	Given User <profile> at <environment> browser home page
 	When User navigate to <siteaddress>
 	Then Page title and landed url should <pagetitle> and <siteurl>
 	Examples: 
-	| siteaddress           | pagetitle                             | siteurl                |
-	| 'http://www.n11.com/' | 'n11.com - Alışverişin Uğurlu Adresi' | 'https://www.n11.com/' |
+	| siteaddress           | pagetitle                             | siteurl                | profile | environment |
+	| 'http://www.n11.com/' | 'n11.com - Alışverişin Uğurlu Adresi' | 'https://www.n11.com/' | 'single' | 'chrome'    |
 
 	Scenario Outline: 2Successful login with Valid Credential
 	Given User at  Homepage
