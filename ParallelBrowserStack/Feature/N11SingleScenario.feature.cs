@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace SpecFlowParallel.Feature
+namespace ParallelBrowserStack.Feature
 {
     using TechTalk.SpecFlow;
     

@@ -10,7 +10,7 @@ using TechTalk.SpecFlow;
 using BrowserStack;
 
 
-namespace SpecFlowParallel.PageObjects
+namespace ParallelBrowserStack.PageObjects
 {
     public class BasePage
     {

@@ -14,7 +14,7 @@ using BrowserStack;
 
 
 
-namespace SpecFlowParallel
+namespace ParallelBrowserStack
 {
 
     [Binding]

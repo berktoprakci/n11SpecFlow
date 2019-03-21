@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 
-namespace SpecFlowParallel.PageObjects
+namespace ParallelBrowserStack.PageObjects
 {
     public class HeaderObjects
     {

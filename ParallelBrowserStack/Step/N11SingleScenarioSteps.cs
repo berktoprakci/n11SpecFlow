@@ -5,10 +5,10 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
-using SpecFlowParallel.PageObjects;
+using ParallelBrowserStack.PageObjects;
 
 
-namespace SpecFlowParallel.Step
+namespace ParallelBrowserStack.Step
 {
     [Binding]
     public class N11SingleScenarioSteps

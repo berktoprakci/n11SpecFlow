@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.438
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecFlowDemo", "SpecFlowDemo\SpecFlowDemo.csproj", "{6E8C83A1-2C5E-41FE-A7C8-F846D4393531}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecFlowParallel", "SpecFlowParallel\SpecFlowParallel.csproj", "{14BE540E-A75F-447B-AD09-3E24CF63999E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParallelBrowserStack", "ParallelBrowserStack\ParallelBrowserStack.csproj", "{A79E1642-EF09-4F02-BFA1-E1EACB89F7FB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{6E8C83A1-2C5E-41FE-A7C8-F846D4393531}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E8C83A1-2C5E-41FE-A7C8-F846D4393531}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E8C83A1-2C5E-41FE-A7C8-F846D4393531}.Release|Any CPU.Build.0 = Release|Any CPU
-		{14BE540E-A75F-447B-AD09-3E24CF63999E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{14BE540E-A75F-447B-AD09-3E24CF63999E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{14BE540E-A75F-447B-AD09-3E24CF63999E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{14BE540E-A75F-447B-AD09-3E24CF63999E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A79E1642-EF09-4F02-BFA1-E1EACB89F7FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A79E1642-EF09-4F02-BFA1-E1EACB89F7FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A79E1642-EF09-4F02-BFA1-E1EACB89F7FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A79E1642-EF09-4F02-BFA1-E1EACB89F7FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
