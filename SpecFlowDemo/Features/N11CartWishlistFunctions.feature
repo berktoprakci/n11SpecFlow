@@ -7,7 +7,7 @@ Scenario Outline: 1Navigate to site's HomePage
 	When User navigate to <siteaddress>
 	Then Page title and landed url should <pagetitle> and <siteurl>
 	Examples: 
-	| siteaddress           | pagetitle                             | siteurl                | profile | environment |
+	| siteaddress           | pagetitle                             | siteurl                | profile  | environment |
 	| 'http://www.n11.com/' | 'n11.com - Alışverişin Uğurlu Adresi' | 'https://www.n11.com/' | 'single' | 'chrome'    |
 
 	Scenario Outline: 2Successful login with Valid Credential
