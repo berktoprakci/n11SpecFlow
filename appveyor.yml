@@ -5,6 +5,6 @@ branches:
 image: Visual Studio 2019
 configuration: Release
 before_build:
-    -ps: nuget restore .\SpecFlowDemo.sln
+    - ps: nuget restore .\SpecFlowDemo.sln
 
-build: .\SpecFlowDemo.sln  
+build: .\SpecFlowDemo.sln
